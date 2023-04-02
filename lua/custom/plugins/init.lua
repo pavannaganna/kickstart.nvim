@@ -8,4 +8,18 @@ return {
 	"MunifTanjim/nui.nvim",
 	"nvim-lua/plenary.nvim",
 	"nvim-neo-tree/neo-tree.nvim",
+	"tpope/vim-dispatch",
+	{ "bazelbuild/vim-bazel", dependencies = { "google/vim-maktaba" } },
+	{
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require('trouble').setup {}
+		end
+	}
+
 }
